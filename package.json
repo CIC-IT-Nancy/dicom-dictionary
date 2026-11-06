@@ -1,6 +1,6 @@
 {
   "name": "@cic-it-nancy/dicom-dictionary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DICOM Dictionary",
   "license": "LGPL-3.0",
   "author": "CIC-IT Nancy",
@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "npm run build:typescript && npm run build:browser && npm run build:browser:min",
-    "build:typescript": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json",
+    "build:typescript": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
     "build:browser": "esbuild ./lib/esm/index.js --bundle --platform=browser --outfile=./lib/browser.js",
     "build:browser:min": "esbuild ./lib/esm/index.js --bundle --platform=browser --minify --outfile=./lib/browser.min.js",
     "prepublish": "npm run build"
